@@ -1,0 +1,12 @@
+
+<div class="popover-container">
+  <div class="popover" *ngIf="!showActionButton">
+    <h2 class="popover-heading">{{title}} </h2>
+    <ng-content select=".popover-content"></ng-content>
+    <div class="popover-arrow"></div>
+  </div><!--/.popover-->
+<div (click)="actionButtonClicked($event)">
+  <ng-content select=".action-button"></ng-content>
+</div>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="multi-select-holder">
+    <div class="m-label">{{labelText}}</div>
+    <app-dropdown>
+        <div class="m-box" fxLayoutAlign="space-between center" dropdown-box>
+            <div class="selections">
+                <!--<span *ngFor="let s of (selectedItems | async); let l=last; trackBy: customTrackBy">{{config ? s.get(config.text) : s}}{{l ? '' : ',&nbsp;'}}</span>-->
+                <span>{{(selectedItems | async).size > 0 ? ((selectedItems | async).size + ' item(s) selected') : 'Select'}}</span>
+            </div>
+            <i class="icon-arrow-down"></i>
+        </div>
+        <ul class="m-suggestions" *ngIf="!nested" suggestions-holder>
+            <li *ngIf="showSelectAll">
+                <md-checkbox  [disableRipple]="true"[checked]="false" class="chkbox" (change)="selectAllSuggestions($event)">Select All</md-checkbox>
+            </li>
+            <hr />
+            <li *ngFor="let s of (suggestionsData | async); let i = index; trackBy: customTrackBy" [ngClass]="{selected: (selectedItemIndex === i)}">
+                <md-checkbox [disableRipple]="true" [checked]="findIfSelected(s.toJS())" (change)="chooseSuggestion($event, i)" class="chkbox">{{config ? s.get(config.text) : s}}</md-checkbox>
+            </li>
+        </ul>
+        <ul class="m-suggestions nested" *ngIf="nested" suggestions-holder>
+            <li *ngFor="let suggestion of (suggestionsData | async);">
+                <p class="header">{{suggestion.get('name')}}</p>
+                <ul class="n-suggestions">
+                    <li *ngFor="let s of suggestion.get('list'); let i=index; trackBy: customTrackBy " [ngClass]="{selected: (selectedItemIndex===i )} ">
+                        <md-checkbox [disableRipple]="true" [checked]="findIfSelected(s.toJS()) " (change)="chooseNestedSuggestion($event, suggestion, i) " class="chkbox">{{config ? s.get(config.text) : s}}</md-checkbox>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </app-dropdown>
+</div>

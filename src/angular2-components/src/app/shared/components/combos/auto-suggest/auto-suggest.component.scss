@@ -1,0 +1,89 @@
+.agc-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // min-width: 150px;
+    position: relative; // margin: 10px;
+    background: #fff;
+    .agc-label {
+        font-size: 11px;
+        color: #28313B;
+        margin-bottom: 6px;
+        text-align: left;
+    }
+    .agc-box {
+        padding: 5px;
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+        border: 1px solid #e9eff4;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 24px;
+        &:active {
+            // background: #ccc;
+        }
+        .agc-down-chevron {
+            float: right;
+            margin-right: 3px;
+            >i {
+                font-size: 6px;
+                margin-right: 6px;
+                color: #97a4b1;
+            }
+        }
+        >input[type="text"] {
+            outline: none;
+            border: none;
+            background: transparent;
+        }
+    }
+    ul.agc-suggestions {
+        list-style: none; // max-height: 320px;
+        min-width: 100px;
+        width: 100%;
+        max-height: 178px;
+        overflow-y: auto;
+        margin: 0;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        border-radius: 0px;
+        padding: 0;
+        transform: scale(0.5, 0);
+        transform-origin: 0 0;
+        transition: transform 0.1s;
+        margin-top: 8px;
+        left: 0;
+        &:hover li.agc-selected {
+            background: transparent;
+        }
+        li {
+            padding: 10px 20px;
+            text-align: left;
+            cursor: pointer;
+            &:hover,
+            &:active,
+            &:focus,
+            &.agc-selected {
+                background: #eceff1;
+            }
+            outline: none;
+        }
+        &.agc-collapsed {
+            transform: scale(0, 0);
+        }
+        &.agc-expanded {
+            // width: 100%;
+            transform: scale(1, 1);
+        }
+    }
+    &.agc-disabled {
+        background: transparent;
+        cursor: not-allowed;
+        .agc-box {
+            cursor: not-allowed;
+        }
+    }
+}

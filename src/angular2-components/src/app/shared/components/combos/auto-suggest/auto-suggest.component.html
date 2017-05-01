@@ -1,0 +1,15 @@
+<div class="agc-holder">
+	<div class="agc-label" *ngIf="config.get('labelText')">{{config.get('labelText')}}</div>
+	<div class="agc-box" #inputBox (click)="toggleShowSuggestions($event)" (keyup.enter)="toggleShowSuggestions()">
+		<input type="text" name="selectedValueInput" [value]="getSelectedValue(selectedValue)" #inputText (keyup)="inputTextKeyDown($event)"
+		 [placeholder]="config.get('placeholderText')" [readonly]="config.get('filter') === false" autocomplete="off" />
+		<div class="agc-down-chevron" #downChevron>
+			<i class="icon-arrow-down"></i>
+		</div>
+		<ul class="agc-suggestions" #suggestionsHolder [ngClass]="{'agc-expanded' : suggestionsOpen}">
+			<li [ngClass]="{'agc-selected': (i == selectedIndex)}" *ngFor="let s of suggestions; let i = index;" (mousedown)="chooseSuggestion(i)">
+				{{getSuggestionValue(s)}}
+			</li>
+		</ul>
+	</div>
+</div>

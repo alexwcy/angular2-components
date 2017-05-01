@@ -1,0 +1,48 @@
+<div class="attachments-row" fxLayoutAlign="start center" *ngIf="addedFiles.size > 0" fxLayoutWrap>
+    <div class="attachments" *ngFor="let file of addedFiles; let i=index">
+        <div *ngIf="isPdf(getAttachmentName(file).substr(getAttachmentName(file).lastIndexOf('.') + 1))" class="attachment" fxLayout="row" fxLayoutAlign="space-around space-around">
+            <div class="sprite pdf"></div>
+            <div class="attachment-name">{{decodeURIComponent(getAttachmentName(file))}}</div>
+            <i class="icon-close cross-btn" aria-hidden="true" (click)="removeAddedFile(i)"></i>
+        </div>
+        <div *ngIf="isExcel(getAttachmentName(file).substr(getAttachmentName(file).lastIndexOf('.') + 1))" class="attachment" fxLayout="row" fxLayoutAlign="space-around space-around">
+            <div class="sprite xls"></div>
+            <div class="attachment-name">{{decodeURIComponent(getAttachmentName(file))}}</div>
+            <i class="icon-close cross-btn" aria-hidden="true" (click)="removeAddedFile(i)"></i>
+        </div>
+        <div *ngIf="isWord(getAttachmentName(file).substr(getAttachmentName(file).lastIndexOf('.') + 1))" class="attachment" fxLayout="row" fxLayoutAlign="space-around space-around">
+            <div class="sprite doc"></div>
+            <div class="attachment-name">{{decodeURIComponent(getAttachmentName(file))}}</div>
+            <i class="icon-close cross-btn" aria-hidden="true" (click)="removeAddedFile(i)"></i>
+        </div>
+        <div *ngIf="isPng(getAttachmentName(file).substr(getAttachmentName(file).lastIndexOf('.') + 1))" class="attachment" fxLayout="row" fxLayoutAlign="space-around space-around">
+            <div class="sprite png"></div>
+            <div class="attachment-name">{{decodeURIComponent(getAttachmentName(file))}}</div>
+            <i class="icon-close cross-btn" aria-hidden="true" (click)="removeAddedFile(i)"></i>
+        </div>
+        <div *ngIf="isJpg(getAttachmentName(file).substr(getAttachmentName(file).lastIndexOf('.') + 1))" class="attachment" fxLayout="row" fxLayoutAlign="space-around space-around">
+            <div class="sprite jpg"></div>
+            <div class="attachment-name">{{decodeURIComponent(getAttachmentName(file))}}</div>
+            <i class="icon-close cross-btn" aria-hidden="true" (click)="removeAddedFile(i)"></i>
+        </div>
+        <div *ngIf="isCsv(getAttachmentName(file).substr(getAttachmentName(file).lastIndexOf('.') + 1))" class="attachment" fxLayout="row" fxLayoutAlign="space-around space-around">
+            <div class="sprite csv"></div>
+            <div class="attachment-name">{{decodeURIComponent(getAttachmentName(file))}}</div>
+            <i class="icon-close cross-btn" aria-hidden="true" (click)="removeAddedFile(i)"></i>
+        </div>
+    </div>
+    <div class="attachment new" (click)="triggerFileInputClick($event)">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+</div>
+<div class="controls-section" fxLayoutAlign="space-between center">
+    <div class="left-section" fxLayoutAlign="start start">
+        <ng-content select="[leftControls]"></ng-content>
+        <div class="control-item paperclip" [mdTooltip]="'Insert file'">
+            <input type="file" name="fileInput" accept=".pdf,.xls,.xlsx,.docx,.csv,.doc,image/*,.ppt" (change)="fileAdded($event)" #inputFileEl multiple />
+            <i class="icon-attachment" aria-hidden="true"></i>
+            <span style="font-size: 13px;align-items: center;margin-left: 3px;">(Total files size < 20 MB)</span>
+        </div>
+    </div>
+    <ng-content select="[rightButtons]"></ng-content>
+</div>

@@ -1,0 +1,15 @@
+<ng-content></ng-content>
+<template #lightboxTemplate>
+    <style>
+    .img-wrapper {
+		line-height: 0;
+    }
+    img, .img-wrapper {
+        max-height: 90vh;
+        overflow: hidden;
+    }
+    </style>
+    <div class="img-wrapper">
+        <img [src]="imgSrc | safeUrl" />
+    </div>
+</template>

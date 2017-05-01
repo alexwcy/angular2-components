@@ -1,0 +1,14 @@
+<div class="chooser" [ngClass]="{'disabled': isDisabled}" #chooserHolder>
+    <div class="chooser-label" *ngIf="!hideLabel">{{labelText}}</div>
+    <div class="chooser-box" #box tabindex="0" (mousedown)="toggleSuggestions()" (keyup.enter)="toggleSuggestions()">
+        <img *ngIf="selectedItem && selectedItem.get(config.icon)" style="height: 25px; width: 25px; float: left;" src="{{selectedItem.get(config.icon)}}"
+        />
+        <span>{{selectedItem?.get(config.text) ? selectedItem.get(config.text) : defaultSelection}}</span>
+        <i class="material-icons">keyboard_arrow_down</i>
+    </div>
+    <ul class="chooser-suggestions" #suggestions>
+        <li #suggestion [ngClass]="{selected: (s == selectedValue)}" *ngFor="let s of suggestionsData; let i = index;" (keyup.enter)="itemChosen(s, i)"
+            (mousedown)="itemChosen(s, i, $event)">
+            <img *ngIf="s && s.get(config.icon)" style="height: 25px; width: 25px; float: left;" src="{{s.get(config.icon)}}" />            {{config ? s.get(config.text) : s}}</li>
+    </ul>
+</div>

@@ -1,0 +1,25 @@
+.od-table {
+
+  border-collapse: collapse;
+  width:100%;
+  text-align: left;
+
+  th, td {
+
+  }
+  th {
+
+    padding: 12px !important;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  td {
+    padding: 12px !important;
+
+  }
+  tr {
+    border-bottom: 1px solid #ccc !important;
+
+  }
+}

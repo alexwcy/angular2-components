@@ -1,0 +1,106 @@
+/*
+This is simple popover based on Google's Material Design. It also includes few versions: basic, info and warning.
+*/
+
+// color variables
+$basic-color: #fff;
+$info-color: #1e88e5;
+$warning-color: #e53935;
+$basic-text-color: #333;
+$white-text-color: #fff;
+$transparent-color: transparent;
+$background-color: #fafafa;
+// functions
+@function border($width: 8px, $type: solid, $color: transparent) {
+    @return $width $type $color;
+}
+
+// basic styles
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: $basic-text-color;
+    background-color: $background-color;
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+a {
+    color: $basic-text-color;
+    &:hover {
+        color: darken($basic-text-color, 20%);
+    }
+}
+
+.popover-container {
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+// popover styles
+.popover {
+    position: absolute;
+    z-index: 5;
+    left: -50%;
+    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    color: $basic-text-color;
+    background-color: $basic-color;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.popover-heading {
+    margin-top: 10px;
+}
+
+.popover-arrow {
+    position: relative;
+    bottom: -35px;
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    background-color: $transparent-color;
+    border-top: border(8px, solid, $basic-color);
+    border-left: border();
+    border-right: border();
+    border-bottom: border();
+}
+
+// popover info
+.popover-info {
+    @extend .popover;
+    color: $white-text-color;
+    background-color: $info-color;
+    .popover-arrow {
+        border-top: border(8px, solid, $info-color);
+    }
+    a {
+        color: $white-text-color;
+        &:hover {
+            color: darken($white-text-color, 20%);
+        }
+    }
+}
+
+// popover warning
+.popover-warning {
+    @extend .popover-info;
+    background-color: $warning-color;
+    .popover-arrow {
+        border-top: border(8px, solid, $warning-color);
+    }
+}

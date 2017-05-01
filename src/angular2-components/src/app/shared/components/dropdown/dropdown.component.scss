@@ -1,0 +1,48 @@
+@import './../../../../styles/base/_variables.scss';
+.dropdown-holder {
+    position: relative; // margin: 10px;
+    // background: #fff;
+    .box-holder {}
+    .suggestions-holder {
+        min-width: 100%;
+        top: 35px;
+        list-style: none;
+        max-height: 320px;
+        overflow-y: auto;
+        margin: 0;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        border-radius: 0px;
+        padding: 0;
+        transform: scale(0.5, 0);
+        transform-origin: 0 0;
+        transition: transform 0.1s; // &:hover li.selected {
+        //     background: transparent;
+        // }
+        >div {}
+        &.collapsed {
+            transform: scale(0, 0);
+        }
+        &.expanded {
+            // width: 100%;
+            transform: scale(1, 1);
+        }
+        .chooser-suggestions{
+            .group-header{
+                padding: 0 10px;
+            }
+            .group-item{
+                line-height: 24px;
+            }
+        }
+    }
+    &.disabled {
+        background: transparent;
+        cursor: not-allowed;
+        .chooser-box {
+            cursor: not-allowed;
+        }
+    }
+}

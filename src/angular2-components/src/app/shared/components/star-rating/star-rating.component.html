@@ -1,0 +1,7 @@
+<div class="rating-holder">
+    <ng-container *ngFor="let s of [5,4,3,2,1];">
+        <input type="radio" name="radio" id="star{{s}}" value="{{s}}" (change)="starSelected($event, s)" [disabled]="readOnly" [checked]="s === selectedRating"
+        />
+        <label for="star{{s}}"></label>
+    </ng-container>
+</div>

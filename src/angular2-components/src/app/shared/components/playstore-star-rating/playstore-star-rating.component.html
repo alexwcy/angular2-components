@@ -1,0 +1,7 @@
+
+<ng-container *ngFor="let s of [1, 2, 3, 4, 5];">
+    <span class="star-rating" [ngClass]="{'active-star': s<=starRating, 'star': s>starRating}">&#9733;</span>
+</ng-container>
+
+
+

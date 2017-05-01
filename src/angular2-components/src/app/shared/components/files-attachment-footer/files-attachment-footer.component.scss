@@ -1,0 +1,70 @@
+@import '../../../../styles/base/_variables.scss';
+.attachments-row {
+    margin-top: 10px;
+    .attachments {
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 2px;
+        float: left;
+        margin-right: 15px;
+        .attachment {
+            border: 1px solid $border-grey;
+            width: 100%;
+            height: 55px;
+            margin: 5px 0;
+            background: white;
+        }
+        .attachment-name {
+            padding: 15px 0;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .cross-btn {
+            padding: 17px 10px;
+        }
+    }
+    .new {
+        background: #FFFFFF;
+        border: 1px dashed #97A4B1;
+        border-radius: 2px;
+        color: #97A4B1;
+        cursor: pointer;
+        height: 55px;
+        padding:20px
+    }
+}
+
+.controls-section {
+    margin: 15px 0;
+    .left-section {
+        .control-item {
+            cursor: pointer;
+            >i {}
+            margin-left: 20px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                font-size: 18px;
+            }
+            &.paperclip {
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                input[type="file"] {
+                    position: absolute;
+                    width: inherit;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .right-section {
+        >button {
+            margin-left: 20px;
+        }
+    }
+}

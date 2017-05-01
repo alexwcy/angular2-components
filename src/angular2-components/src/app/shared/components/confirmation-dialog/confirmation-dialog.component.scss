@@ -1,0 +1,45 @@
+@import '../../../../styles/base/_variables.scss';
+.box-holder {
+    height: 100%;
+    overflow: hidden;
+    width: 500px;
+    .header-row {
+        padding: 15px 20px;
+        background: #f2f8fc;
+        .header-title {
+            font-size: 16px;
+        }
+        .close-btn {
+            .icon-close {
+                font-size: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .box-content {
+        padding: 0px 20px 20px 20px;
+        .content-holder {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            height: 100%;
+            font-size: 13px;
+            font-weight: 400;
+            word-break: break-word;
+        }
+        .action-container {
+            .action-button {
+                margin-right: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+    .text-center-align {
+        text-align: center;
+    }
+    .text-right-align {
+        text-align: right;
+    }
+    .float-right {
+        float: right;
+    }
+}

@@ -1,0 +1,29 @@
+.fb-review-container {
+    .fb-review {
+        background-color: #4382A8;
+        padding: 3px 3px 3px 6px;
+        border-radius: 10px;
+        margin-right: 5px;
+        color: #fff;
+        text-align: center;
+
+        .rating {
+            color: #a9a9a9;
+            margin: 0;
+            padding: 0;
+            .material-icons {
+            font-size: 15px;
+            width: 20px;
+        }
+        .star{
+            height: 13px !important ;
+            width:15px !important;
+        }
+        }
+    }
+    .review-text {
+        color: #6C6C6C;
+        font-size: 13px;
+        font-weight: 400;
+    }
+}

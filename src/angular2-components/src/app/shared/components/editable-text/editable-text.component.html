@@ -1,0 +1,8 @@
+<div (blur)="ruleblur($event)" class="editable-text-div" contenteditable="true" [textContent]="textContent" (input)="textContent=$event.target.textContent" strip-br="true" (focus)="showControls()">
+</div>
+<div class="controls" [hidden]="!showCntrls || !isActioable">
+    <button class="submit-rule" title="Save" (mousedown)="submitevent($event)">
+    </button>
+    <button class="cancel-rule" title="Cancel" (mousedown)="cancelevent($event)">
+    </button>
+</div>

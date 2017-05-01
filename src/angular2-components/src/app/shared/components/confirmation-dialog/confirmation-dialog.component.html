@@ -1,0 +1,16 @@
+<div class="box-holder">
+    <div class="header-row" [ngClass]="{'text-center-align': titleAlign=='center', 'text-right-align': titleAlign=='right' }" fxLayoutAlign="space-between center">
+        <div class="header-title ">
+            {{ title }}
+        </div>
+        <div class="close-btn"><i (click)="closeDialog()" class="icon-close"></i></div>
+    </div>
+    <div class="box-content">
+        <div [innerHTML]="message" class="content-holder" [ngClass]="{'text-center-align': messageAlign=='center', 'text-right-align': messageAlign=='right' }" fxLayoutAlign="start start">
+        </div>
+        <div class="action-container" fxLayoutAlign="end end">
+            <button type="button" *ngIf="showCancel" class="od-button od-ripple small flat action-button" (click)="dialogRef.close()">{{ btnCancelText }}</button>
+            <button type="button" class="od-button small action-button" style="margin-right: 0;" (click)="dialogRef.close(true)"> {{ btnOkText }} </button>
+        </div>
+    </div>
+</div>

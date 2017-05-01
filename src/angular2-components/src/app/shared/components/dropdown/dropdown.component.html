@@ -1,0 +1,8 @@
+<div class="dropdown-holder">
+  <div class="box-holder" (click)="openSuggestions()">
+    <ng-content select="[dropdown-box]"></ng-content>
+  </div>
+  <div #suggestionsHolder class="suggestions-holder" [ngClass]="{'expanded': suggestionsExpanded}">
+    <ng-content select="[suggestions-holder]"></ng-content>
+  </div>
+</div>

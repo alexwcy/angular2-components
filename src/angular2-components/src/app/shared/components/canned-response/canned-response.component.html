@@ -1,0 +1,48 @@
+<div class="canned-response-holder" fxLayout="column" fxLayoutAlign="start start">
+    <div class="header-row" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="header-title">
+            Canned Responses
+        </div>
+        <div class="search-bar" fxFlex="1 0 50%">
+            <input type="search" placeholder="Search Category, Sub Category, Title" class="od-input-box full-width" (keyup)="searchCannedResponse($event)"
+                style="box-sizing: border-box;" />
+        </div>
+    </div>
+    <div class="cr-tabs" fxLayout="row" fxLayoutAlign="start start">
+        <div class="cr-tab-item" fxFlex="1 1 15%">
+            <div class="tab-header">
+                Category
+            </div>
+            <ul class="tab-content">
+                <li *ngFor="let c of (cr | async)" (click)="setSelectedCategory(c)">{{c.get('categoryName')}}</li>
+            </ul>
+        </div>
+        <div class="cr-tab-item" fxFlex="1 1 15%">
+            <div class="tab-header">
+                Sub Category
+            </div>
+            <ul class="tab-content" *ngIf="selectedCategory">
+                <li *ngFor="let c of selectedCategory?.get('cannedResponseSubCategory')" (click)="setSelectedSubCategory(c)">{{c.get('subCategoryName')}}</li>
+            </ul>
+        </div>
+        <div class="cr-tab-item" fxFlex="1 1 70%">
+            <div class="tab-header">
+                Content
+            </div>
+            <ul class="tab-content">
+                <li *ngFor="let cr of (cannedResponses | async)" class="canned-response-li" (click)="selectCannedResponse(cr)">
+                    <div class="cr-content">
+                        <div>
+                            {{cr.get('header')}}
+                        </div>
+                        <div [innerHtml]="cr.get('response') | safeHtml">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cr-footer" fxLayoutAlign="end baseline">
+        <button class="od-button flat" (click)="closeDialog()">Cancel</button>
+    </div>
+</div>

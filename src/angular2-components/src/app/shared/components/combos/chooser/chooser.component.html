@@ -1,0 +1,12 @@
+<div class="chooser" [ngClass]="{'disabled': isDisabled}">
+    <div class="chooser-label" *ngIf="!hideLabel">{{labelText}}</div>
+    <div class="chooser-box" #box tabindex="0" (mousedown)="toggleSuggestions()" (keyup.enter)="toggleSuggestions()">
+        <div class="flex-holder" fxLayoutAlign="space-between center">
+            {{(selectedItemOb | async)?.get(config.text) ? (selectedItemOb | async).get(config.text) : 'Select'}}
+            <i class="icon-arrow-down"></i>
+        </div>
+        <ul class="chooser-suggestions" #suggestions>
+            <li #suggestion [ngClass]="{selected: (s == selectedValue)}" *ngFor="let s of (suggestionsDataOb | async); let i = index;"
+                (keyup.enter)="itemChosen(s, i)" (mousedown)="itemChosen(s, i, $event)">{{config ? s.get(config.text) : s}}</li>
+        </ul>
+    </div>

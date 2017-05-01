@@ -1,0 +1,109 @@
+.ng-chips-holder {
+    min-width: 100px; // margin: 10px;
+    position: relative;
+    background-color: #fff;
+    .ngc-label {
+        font-size: 12px;
+        margin-bottom: 7px;
+        text-align: left;
+    }
+    .ngc-flow {
+        display: flex;
+        border: 1px solid #d2dae8;
+        border-radius: 3px;
+        min-height: 48px; // width: 200px;
+        flex-wrap: wrap;
+        .suggestion-container{
+            position: relative;
+        }
+        .ngc-chip {
+            background: #eff2f7;
+            font-size: 14px;
+            margin: 5px;
+            padding: 6px 9px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            .ngc-cross {
+                font-size: 10px;
+                height: auto !important;
+                width: 11px !important;
+                margin-left: 6px;
+                cursor: pointer;
+            }
+            &.ngc-selected {
+                background: rgba(204, 204, 204, 0.6);
+            }
+            &:hover {
+                background: #e3e5e7;
+                cursor: default;
+            }
+        }
+        input[type="text"] {
+            padding: 6px;
+            padding-left: 0;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            margin-left: 10px;
+            flex: 1 0 auto;
+            &::-webkit-input-placeholder {
+                font-size: 14px;
+            }
+            &::-moz-placeholder {
+                font-size: 14px;
+            }
+            &:-ms-input-placeholder {
+                font-size: 14px;
+            }
+            &:-moz-placeholder {
+                font-size: 14px;
+            }
+        }
+    }
+    ul.ngc-suggestions {
+        list-style: none;
+        min-width: 200px;
+        margin-top: 2px;
+        position: absolute;
+        max-height: 320px;
+        overflow-y: auto;
+        background: #fff;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        border-radius: 0px;
+        padding: 0;
+        transform: scale(0.5, 0);
+        transform-origin: 0 0;
+        transition: transform 0.1s;
+        &:hover li.ngc-selected {
+            background: transparent;
+        }
+        li {
+            padding: 10px 20px;
+            text-align: left;
+            &:hover,
+            &.ngc-selected {
+                background: rgba(204, 204, 204, 0.3);
+                cursor: pointer;
+            }
+            outline: none;
+        }
+        &.ngc-collapsed {
+            transform: scale(0, 0);
+        }
+        &.ngc-expanded {
+            transform: scale(1, 1);
+        }
+    }
+    &.ngc-disabled {
+        background: transparent;
+        cursor: not-allowed;
+        .ngc-cross {
+            cursor: not-allowed;
+        }
+        input[type="text"] {
+            background: transparent;
+        }
+    }
+}

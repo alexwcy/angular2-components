@@ -1,0 +1,37 @@
+
+  <h3 class="popover-title ng-binding ng-scope">Versions</h3>
+  <div class="version-container">
+  <div fxFlex="100" fxLayoutAlign="space-between" *ngFor="let review of review" class="feed-info-container">
+    <div fxLayoutAlign="start">
+    <div class="img-section" *ngIf="isCustomerReview" >
+      <img src="{{review.userImage}}" appImgFallback>
+    </div>
+    <div class="img-section" *ngIf="!isCustomerReview" >
+      <img src="{{review.brandIcon}}" appImgFallback>
+    </div>
+    <div fxLayout="column" >
+      <div fxLayout="row">
+        <span *ngIf="isCustomerReview" class="pl-author">{{review.author}}</span>
+        <span *ngIf="!isCustomerReview" class="pl-author">{{review.appName}}</span>
+        <span class="pl-date"> {{review.published_at | amDateFormat: 'D MMM, YYYY, h:mma'}}</span>
+      </div>
+      <div fxLayout="row" class="description-section">
+        <!--<div>{{review.subject}}</div>-->
+        {{review.reviewText}}
+      </div>
+      <div *ngIf="!isCustomerReview" fxLayout="row" class="">
+        <span class="pl-commentedby">Commented by : <b>{{review.author}}</b> 
+        <b *ngIf="!review.author">Replied at Source</b>
+      </span>
+      </div>
+    </div>
+    </div>
+    <div *ngIf="isCustomerReview" fxFlex="15" fxLayout="column" fxLayoutAlign="start end">
+      <span *ngIf="isCustomerReview" fxLayout="row" >
+          <app-playstore-star-rating [starRating]="review.rating"></app-playstore-star-rating>
+      </span>
+      <app-sentiment-box *ngIf="isCustomerReview" fxLayout="row" [selectedSentiment]="review.sentiment" [isDisabled]="true"
+        style="margin-top: 8px;"></app-sentiment-box>
+    </div>
+  </div>
+</div>

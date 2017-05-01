@@ -1,0 +1,135 @@
+@import '../sass/utils/variables';
+@import '../sass/utils/functions';
+@import '../sass/utils/mixins';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.picker-wrap {
+  width: 100vw;
+  max-width: 666px;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+
+  @include respond-to(medium) {
+    overflow-y: hidden;
+  }
+}
+
+.picker-dropdown {
+  max-width: 666px;
+  min-width: 333px;
+  border: #777 solid 1px;
+  position: absolute;
+  z-index: 1000;
+  user-select: none;
+  background-color: $white;
+  margin-bottom: $base-line-height/2;
+  border-radius: 5px;
+}
+
+.picker-box {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans';
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.picker-banner {
+  width: 100%;
+  background-color: #4285f4;
+  color: $white;
+  user-select: none;
+}
+
+.picker-banner-day {
+  @include type-setting(1);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.picker-banner-moment {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .moment-date,
+  .moment-time {
+    padding: $base-line-height/2 .5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.65);
+    }
+  }
+
+  .moment-date {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 50%;
+
+    @include respond-to(medium) {
+      justify-content: flex-end;
+    }
+
+    .big, .small {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .big {
+      @include type-setting(4);
+    }
+
+    .small {
+      flex-direction: column;
+      padding: 0 .5rem;
+      font-weight: 300;
+    }
+  }
+
+  .moment-time {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @include respond-to(medium) {
+      width: 50%;
+      justify-content: flex-start;
+    }
+
+    .big, .small {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .big {
+      @include type-setting(3);
+      font-weight: 100;
+    }
+
+    .small {
+      @include type-setting(1);
+      padding: 0 5px;
+    }
+  }
+}
+
+.picker-content {
+  flex-grow: 1;
+  width: 100%;
+  height: $base-line-height * 19;
+
+  .hidden {
+    display: none;
+  }
+}

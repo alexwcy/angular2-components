@@ -1,0 +1,55 @@
+{
+  "name": "angular-linky",
+  "version": "1.2.2",
+  "description": "Angular pipe to find links in text input and turn them into html links",
+  "main": "index.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "pretest": "npm run build",
+    "test": "karma start",
+    "build": "ngc",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzonatan/angular-linky.git"
+  },
+  "keywords": [
+    "angular",
+    "linky"
+  ],
+  "author": "Rokas Brazdzionis <rokas.brazdzionis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzonatan/angular-linky/issues"
+  },
+  "homepage": "https://github.com/dzonatan/angular-linky#readme",
+  "dependencies": {
+    "@types/autolinker": "^0.24.28",
+    "autolinker": "^1.1.0"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^2.1.2",
+    "@angular/compiler-cli": "^2.1.2",
+    "@angular/core": "^2.0.0",
+    "@angular/platform-server": "^2.1.2",
+    "@types/es6-shim": "0.0.31",
+    "@types/jasmine": "^2.2.31",
+    "es6-shim": "^0.35.1",
+    "jasmine-core": "^2.5.1",
+    "karma": "^1.1.2",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "^0.0.24",
+    "karma-webpack": "^1.8.0",
+    "phantomjs-prebuilt": "^2.1.10",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "^0.19.38",
+    "ts-loader": "0.8.2",
+    "typescript": "^2.0.2",
+    "webpack": "^1.13.1",
+    "zone.js": "^0.6.22"
+  }
+}

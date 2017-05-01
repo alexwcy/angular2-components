@@ -1,0 +1,88 @@
+<div class="email-holder forward-dialog">
+    <div class="header" *ngIf="dialogRef" fxLayout="row" fxLayoutAlign="space-between">
+        <div class="heading">{{ this.data.get('labelText') ? this.data.get('labelText') : 'Forward'  }}</div>
+        <div class="close" (click)="discardEmail()">x</div>
+    </div>
+    <div class="middle">
+        <div class="input-wrapper" fxLayout="row">
+            <img [src]="getBrandImage()" appImgFallback class="brand-image" />
+            <div class="input-row-wrapper" fxLayout="column">
+                <div class="input-row from" fxLayoutAlign="start center">
+                    <!--<div class="labelName" fxFlex="1 0 100px">From</div>-->
+                    <div class="control" fxFlex="1 auto">
+                        <app-chooser-plain [hideLabel]="true" [suggestionsData]="data?.get('fromList')" [selectedItem]="fromSelected" [config]="data?.get('fromSuggestionsConfig')"
+                            (itemSelected)="fromChanged($event)"></app-chooser-plain>
+                    </div>
+                </div>
+                <div class="input-row to" fxLayoutAlign="start baseline">
+                    <div class="labelName" fxFlex="1 0 20px">To</div>
+                    <div class="control" fxFlex="1 auto">
+                        <app-chips-plain class="without-border-labels" [hideLabel]="true" [chips]="toSelected" [suggestions]="data?.get('toList')"
+                            [config]="data?.get('toChipConfig')" [allowCustom]="true" [chipConfig]="data?.get('toSuggestionsConfig')"
+                            (selectedChips)="emailChosen('to', $event)" (removedChip)="emailRemoved('to', $event)" [placeholderText]="getToPlaceHolder()"
+                            [openOnFocus]="false" [closeOnSelect]="false" [showNoResult]="false">
+                        </app-chips-plain>
+                    </div>
+                    <div class="cc-bcc" fxFlex="1 0 100px">
+                        <span (click)="isCCOpen = true" *ngIf="!isCCOpen">Cc</span>
+                        <span (click)="isBCCOpen = true" *ngIf="!isBCCOpen">Bcc</span>
+                    </div>
+                </div>
+                <div class="input-row to" fxLayoutAlign="start baseline" *ngIf="isCCOpen">
+                    <div class="labelName" fxFlex="1 0 20px">Cc</div>
+                    <div class="control" fxFlex="1 auto">
+                        <app-chips-plain class="without-border-labels" [hideLabel]="true" [chips]="ccSelected" [suggestions]="data?.get('toList')"
+                            [config]="data?.get('toChipConfig')" [chipConfig]="data?.get('toSuggestionsConfig')" (selectedChips)="emailChosen('cc', $event)"
+                            (removedChip)="emailRemoved('cc', $event)" [allowCustom]="true" [placeholderText]="getCcPlaceHolder()"
+                            [openOnFocus]="false" [closeOnSelect]="false" [showNoResult]="false">
+                        </app-chips-plain>
+                    </div>
+                    <div class="clear-item" (click)="clearEmails('cc', 'isCCOpen')" fxFlex="0 0 100px">
+                        Clear
+                    </div>
+                </div>
+                <div class="input-row to" fxLayoutAlign="start baseline" *ngIf="isBCCOpen">
+                    <div class="labelName" fxFlex="1 0 20px">Bcc</div>
+                    <div class="control" fxFlex="1 auto">
+                        <app-chips-plain class="without-border-labels" [hideLabel]="true" [chips]="bccSelected" [suggestions]="data?.get('toList')"
+                            [config]="data?.get('toChipConfig')" [chipConfig]="data?.get('toSuggestionsConfig')" (selectedChips)="emailChosen('bcc', $event)"
+                            (removedChip)="emailRemoved('bcc', $event)" [allowCustom]="true" [placeholderText]="getBccPlaceHolder()"
+                            [openOnFocus]="false" [closeOnSelect]="false" [showNoResult]="false">
+                        </app-chips-plain>
+                    </div>
+                    <div class="clear-item" (click)="clearEmails('bcc', 'isBCCOpen')" fxFlex="0 0 100px">
+                        Clear
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-row subject" fxLayoutAlign="start center" *ngIf="data.get('subjectEnabled')">
+            <div class="labelName" fxFlex="1 0 55px">Subject :</div>
+            <div fxflex="1 auto" class="control">
+                <input type="text" class="full-width input-box" [value]="subject" (keyup)="emitSubject($event)" />
+            </div>
+        </div>
+        <div class="tiny-mce-wrapper">
+            <app-tinymce-editor [elementId]="editorId" [editorContent]="data?.get('body')" (onEditorKeyup)="tinymceEditorKeyup($event)"
+                (onEditorEventEmitted)="handleEditorEvents($event)" [cannedResponseSelected]="cannedResponseSelected$" #editorComponent>
+            </app-tinymce-editor>
+            <div class="hellip-container" *ngIf="data?.get('hellipEnabled')">
+                <a class="hellip-button" (click)="onHellipClick($event)"><i class="fa fa-ellipsis-h"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="lower">
+        <app-files-attachment-footer [attachments]="attachments" (fileAdded)="attachmentAdded($event)" (fileRemoved)="attachmentRemoved($event)"
+            (fileSizeExceeded)="attachmentSizeExceeded($event)">
+            <div class="control-item" (click)="openCannedResponseDialog()" leftControls>
+                <i class="fa fa-file-text-o" aria-hidden="true" [mdTooltip]="'Select Canned Response'" style="cursor: pointer;"></i>
+            </div>
+            <div class="right-section" fxLayoutAlign="end end" rightButtons>
+                <div class="status-message">{{statusMessage}}</div>
+                <button class="od-button od-ripple medium flat" (click)="discardEmail()">Cancel</button>
+                <app-dropdown-button [disabled]="isSendDisabled" (buttonClicked)="sendEmail(false)" (optionClicked)="sendEmail(false, $event)">
+                </app-dropdown-button>
+            </div>
+        </app-files-attachment-footer>
+    </div>
+</div>

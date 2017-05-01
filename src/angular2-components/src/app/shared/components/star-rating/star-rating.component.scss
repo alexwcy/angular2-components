@@ -1,0 +1,34 @@
+.rating-holder {
+    float: left;
+    display: inline-table;
+    font-size: 10px;
+    margin: 4px 0 0 0;
+    input {
+        display: none;
+        &:checked ~ label {
+            color: #FFD700;
+        }
+        &:checked {
+            +label:hover,
+            ~label:hover ~ label,
+            ~label:hover {
+                color: #f7d000;
+            }
+        }
+    }
+    label {
+        float: right;
+        color: #ddd;
+        &:hover,
+        &:hover ~ label {
+            color: #FFD700;
+        }
+        &:before {
+            margin: 5px;
+            font-size: 1.25em;
+            font-family: FontAwesome;
+            display: inline-block;
+            content: "\f005";
+        }
+    }
+}

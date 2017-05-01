@@ -1,0 +1,65 @@
+@import './../../../../styles/base/_variables.scss';
+.db-holder {
+    position: relative;
+    .dots-holder {
+        padding: 5px 10px;
+        .triple-dots-loader {
+                display: block;
+                position: relative;
+                top: -14px;
+                width: 1.2em;
+                height: 1.2em;
+                &:before {
+                    left: -2em;
+                    width: 1.2em;
+                    height: 1.2em;
+                }
+                &:after {
+                    left: 2em;
+                    width: 1.2em;
+                    height: 1.2em;
+                }
+        }
+    }
+    button.send-btn {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    app-dropdown {       
+        i.dropdown-chevron {
+            cursor: pointer;
+            background: $primary-color;
+            font-size: 6px;
+            color: #fff;
+            padding: 10px;
+            padding-top: 11px;
+            position: relative;
+            top: -1px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        .dropdown-options {
+            width: 200px;
+            >div {
+                padding: 10px 15px;
+                text-align: left;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                color: #1D212A;
+                &:hover,
+                &:active,
+                &:focus,
+                &.selected {
+                    background: #f5fafd;
+                }
+                outline: none;
+            }
+        }
+    }
+}
+.send-btn {
+    padding: 5px 15px 6px !important;
+    margin: -2px 0 0 0 !important;
+}

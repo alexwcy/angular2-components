@@ -1,0 +1,16 @@
+<div class="db-holder">
+	<button class="od-button small send-btn" [disabled]="disabled" *ngIf="isLoading">
+		<div class="dots-holder">
+			<div class="triple-dots-loader"></div>
+		</div>
+	</button>
+	<div class="btn-arena" *ngIf="!isLoading" fxLayoutAlign="start start">
+		<button class="od-button od-ripple small send-btn" [disabled]="disabled" (click)="buttonClicked.emit()">{{buttonText}}</button>
+		<app-dropdown [disabled]="disabled">
+			<i class="icon-arrow-down dropdown-chevron" dropdown-box></i>
+			<div class="dropdown-options" suggestions-holder>
+				<div (mousedown)="chooseOption(index + 2)" *ngFor="let option of options; let index = index;">{{option}}</div>
+			</div>
+		</app-dropdown>
+	</div>
+</div>

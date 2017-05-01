@@ -1,0 +1,12 @@
+<div class="pagination-container-box">
+    <select [(ngModel)]="selectedTotalItems" (change)="changeTotalItems()">
+        <option *ngFor="let option of itemsToShowList" value="{{option.value}}">{{option.key}}</option>
+    </select>
+    <ul class="pagination">
+        <li *ngFor="let pageNumber of totalPages | numberToArray : range:activePage ; let i = index" 
+            (click)="changePage(pageNumber)">
+            <a href="javascript:void(0);" 
+                [ngClass]="{'active': (pageNumber == activePage), 'disable': (pageNumber > totalPages) }"
+            >{{pageNumber}}</a></li>
+    </ul>
+</div>

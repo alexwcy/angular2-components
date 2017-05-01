@@ -1,0 +1,12 @@
+<div class="agc-holder">
+	<div class="agc-label" *ngIf="config.get('labelText')">{{config.get('labelText')}}</div>
+	<div class="agc-box" #inputBox>
+		<textarea name="selectedValueInput" [value]="getSelectedValue(selectedValue)" #inputText (keydown)="inputTextKeyDown($event)"
+		 [placeholder]="config.get('placeholderText')" [readonly]="config.get('filter') === false" (keyup)="inputTextKeyUp($event)"></textarea>
+		<ul class="agc-suggestions" #suggestionsHolder [ngClass]="{'agc-expanded' : suggestionsOpen}">
+			<li [ngClass]="{'agc-selected': (i == selectedIndex)}" *ngFor="let s of suggestions; let i = index;" (mousedown)="chooseSuggestion(i)">
+				{{getSuggestionValue(s)}}
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<div mdTooltip="Sentiment of the customer response" class="sentiment-box-holder" (click)="openDropdown()">
+    <div class="light-dot" [ngClass]="getSelectedSentimentClass(selectedSentiment)"></div>
+    <div class="down-chevron" *ngIf="!isDisabled">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+</div>
+<ul class="sb-dropdown" [ngClass]="{expanded: isDropDownOpen && !isDisabled}" #dropdown (blur)="collapseDropdown($event)">
+    <li class="positive" (click)="changeSentiment('positive')">Positive</li>
+    <li class="negative" (click)="changeSentiment('negative')">Negative</li>
+    <li class="neutral" (click)="changeSentiment('neutral')">Neutral</li>
+</ul>
