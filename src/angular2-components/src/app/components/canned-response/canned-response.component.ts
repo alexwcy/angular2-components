@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Subject, BehaviorSubject } from 'rxjs/Rx';
 import { MdDialogRef } from '@angular/material';
-import { TICKET_SOURCE_ENUM } from '../../../shared/global.constants'
+//import { TICKET_SOURCE_ENUM } from '../../../shared/global.constants'
 
 @Component({
 	selector: 'app-canned-response',
@@ -76,13 +76,13 @@ export class CannedResponseComponent implements OnInit {
 		this.cannedResponses.next(cannedResponses);
 	}
 	selectCannedResponse(cr) {
-		if (TICKET_SOURCE_ENUM['Email'] == cr.get('source')) {
+		if (true) {
 			this.cannedResponseSelected.next(cr);
 		}
-		else {
-			this.cannedResponseSelected.next(cr.set('response', this.parseHtml(cr.get('response'))));
-		}
-		this.dialog.close();
+		// else {
+		// 	this.cannedResponseSelected.next(cr.set('response', this.parseHtml(cr.get('response'))));
+		// }
+		 this.dialog.close();
 	}
 
 	closeDialog() {

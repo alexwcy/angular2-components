@@ -1,0 +1,206 @@
+// @import './helpers/flexbox.scss';
+@import './base/_mixins.scss';
+@import './base/_variables.scss';
+@import './base/_normalize.scss';
+@import './base/_theme.scss';
+@import './helpers/triple-dots-loader.scss';
+@font-face {
+    font-family: 'icomoon';
+    src: url('/v2/assets/fonts/icomoon.eot?i5rh7a');
+    src: url('/v2/assets/fonts/icomoon.eot?i5rh7a#iefix') format('embedded-opentype'), url('/v2/assets/fonts/icomoon.ttf?i5rh7a') format('truetype'), url('/v2/assets/fonts/icomoon.woff?i5rh7a') format('woff'), url('/v2/assets/fonts/icomoon.svg?i5rh7a#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-retweet:before {
+    content: "\e900";
+}
+
+.icon-Filters:before {
+    content: "\e901";
+}
+
+.icon-notification:before {
+    content: "\e902";
+}
+
+.icon-search:before {
+    content: "\e903";
+}
+
+.icon-comment:before {
+    content: "\e904";
+}
+
+.icon-label:before {
+    content: "\e905";
+}
+
+.icon-like:before {
+    content: "\e906";
+}
+
+.icon-arrow-down:before {
+    content: "\e907";
+}
+
+.icon-arrow-left:before {
+    content: "\e908";
+}
+
+.icon-arrow-right:before {
+    content: "\e909";
+}
+
+.icon-arrow-up:before {
+    content: "\e90a";
+}
+
+.icon-attachment:before {
+    content: "\e90b";
+}
+
+.icon-calender:before {
+    content: "\e90c";
+}
+
+.icon-canned:before {
+    content: "\e90d";
+}
+
+.icon-close:before {
+    content: "\e90e";
+}
+
+.icon-collapse:before {
+    content: "\e90f";
+}
+
+.icon-delete:before {
+    content: "\e910";
+}
+
+.icon-download:before {
+    content: "\e911";
+}
+
+.icon-edit:before {
+    content: "\e912";
+}
+
+.icon-forward:before {
+    content: "\e913";
+}
+
+.icon-like_heart:before {
+    content: "\e914";
+}
+
+.icon-more:before {
+    content: "\e915";
+}
+
+.icon-plus:before {
+    content: "\e916";
+}
+
+.icon-reply-all:before {
+    content: "\e917";
+}
+
+.icon-reply:before {
+    content: "\e918";
+}
+
+.icon-show:before {
+    content: "\e919";
+}
+
+.icon-unlike_heart:before {
+    content: "\e91a";
+}
+
+@mixin sidebar-style {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.white-background {
+    background: $white;
+}
+
+.grey-background {
+    background: $grey;
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+}
+
+.grey-font {
+    color: $grey-font
+}
+
+.blue-font {
+    color: $blue-font;
+}
+
+body {
+    @include sidebar-style();
+}
+
+// Put the material select UI mods here since it is build as an overlay
+.app-container {
+    md-option {
+        font-size: 15px; // height: 32px;
+    }
+}
+
+.flex-container {
+    width: 100%;
+}
+
+.mat-sidenav-content {
+    width: 100%;
+}
+
+.icon-liked-filled {
+                        color: $primary-color;
+                    }
+.dm-reply-box-holder{
+    .lower-flex{
+        .press-enter-to-send{
+            .db-holder{
+                .send-btn{
+                        margin: -5px 0 0 0 !important;
+                }
+            }
+        }
+    }
+}
+.pre-container{
+    white-space: pre-wrap;
+    overflow: visible;
+    word-break:break-all;
+    margin:0px;
+    font-family: 'Lato', sans-serif !important;
+}

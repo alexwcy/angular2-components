@@ -1,0 +1,29 @@
+
+/*  BreakPoints  */
+$iphone : 344px;
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-iphone {
+  @media only screen and (max-width: #{$iphone}) {
+    @content;
+  }
+}
+
+@mixin user-select-none {
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}

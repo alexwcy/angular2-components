@@ -8,10 +8,10 @@ import { MdPaginationModule } from "./components/pagination";
 
 /* Shared Components */
 import { OdTableComponent } from "./components/od-table/od-table.component";
-import { TinymceEditorComponent } from "./components/tinymce-editor/tinymce-editor.component";
+// import { TinymceEditorComponent } from "./components/tinymce-editor/tinymce-editor.component";
 import { ChooserComponent } from "./components/combos/chooser/chooser.component";
 import { MultiSelectComponent } from "./components/combos/multi-select/multi-select.component";
-import { ChipsComponent } from "./components/combos/chips/chips.component";
+// import { ChipsComponent } from "./components/combos/chips/chips.component";
 import { StarRatingComponent } from "./components/star-rating/star-rating.component";
 import { CannedResponseComponent } from "./components/canned-response/canned-response.component";
 import { EditableTextComponent } from './components/editable-text/editable-text.component';
@@ -77,8 +77,8 @@ import { LinkyModule } from "./pipes/angular-linky/index";
         OdTableComponent,
         MultiSelectComponent,
         ChooserComponent,
-        ChipsComponent,
-        TinymceEditorComponent,
+        // ChipsComponent,
+        // TinymceEditorComponent,
         CommonModule,
         StarRatingComponent,
         CannedResponseComponent,
@@ -112,8 +112,8 @@ import { LinkyModule } from "./pipes/angular-linky/index";
         OdTableComponent,
         MultiSelectComponent,
         ChooserComponent,
-        ChipsComponent,
-        TinymceEditorComponent,
+        // ChipsComponent,
+        // TinymceEditorComponent,
         StarRatingComponent,
         CannedResponseComponent,
         EditableTextComponent,

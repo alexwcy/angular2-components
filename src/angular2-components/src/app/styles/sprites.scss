@@ -1,0 +1,784 @@
+/* sprite images css added by shashi   */
+
+@import './base/_variables.scss';
+.sprite {
+    background: url('#{$image-base-path}sprite.png') no-repeat top left;
+    width: 25px;
+    height: 25px;
+}
+
+.sprite.error-alert {
+    background-position: 0 0;
+    width: 60px;
+    height: 60px;
+}
+
+.sprite.info-alert {
+    background-position: 0 -65px;
+    width: 60px;
+    height: 60px;
+}
+
+.sprite.nps {
+    background-position: 0 -130px;
+    width: 21px;
+    height: 20px;
+}
+
+.sprite.success-alert {
+    background-position: 0 -155px;
+    width: 60px;
+    height: 60px;
+}
+
+.sprite.Bad {
+    background-position: 0 -220px;
+}
+
+.sprite.default-user {
+    background-position: 0 -250px;
+    width: 50px;
+    height: 50px;
+}
+
+.sprite.excel {
+    background-position: 0 -305px;
+    width: 17px;
+    height: 17px;
+}
+
+.sprite.Excellent {
+    background-position: 0 -327px;
+}
+
+.sprite.facebook2 {
+    background-position: 0 -357px;
+    width: 64px;
+    height: 64px;
+    transform: scale(0.28) translate(-74px, -65px);
+    -webkit-transform: scale(0.28) translate(-74px, -65px);
+    -moz-transform: scale(0.28) translate(-74px, -65px);
+}
+
+.sprite.Good {
+    background-position: 0 -426px;
+}
+
+.sprite.image {
+    background-position: 0 -456px;
+    width: 15px;
+    height: 19px;
+}
+
+.sprite.mail {
+    background-position: 0 -480px;
+    width: 64px;
+    height: 64px;
+    transform: scale(0.28) translate(-74px, -65px);
+    -webkit-transform: scale(0.28) translate(-74px, -65px);
+    -moz-transform: scale(0.28) translate(-74px, -65px);
+}
+
+.sprite.notification_icon {
+    background-position: 0 -549px;
+    width: 22px;
+}
+
+.sprite.other_blog {
+    background-position: 0 -579px;
+    width: 32px;
+    height: 31px;
+}
+
+.sprite.other {
+    background-position: 0 -615px;
+    width: 17px;
+    height: 19px;
+}
+
+.sprite.others {
+    background-position: 0 -639px;
+    width: 64px;
+    height: 64px;
+    transform: scale(0.28) translate(-74px, -65px);
+    -webkit-transform: scale(0.28) translate(-74px, -65px);
+    -moz-transform: scale(0.28) translate(-74px, -65px);
+}
+
+.sprite.pdf {
+    background-position: 0 -708px;
+    width: 18px;
+    height: 18px;
+}
+
+.sprite.question-mark {
+    background-position: 0 -731px;
+    width: 24px;
+    height: 24px;
+}
+
+.sprite.twitter2 {
+    background-position: 0 -760px;
+    width: 64px;
+    height: 64px;
+    transform: scale(0.28) translate(-74px, -65px);
+    -webkit-transform: scale(0.28) translate(-74px, -65px);
+    -moz-transform: scale(0.28) translate(-74px, -65px);
+}
+
+.sprite.Very-Good {
+    background-position: 0 -829px;
+}
+
+.sprite.word {
+    background-position: 0 -859px;
+    width: 18px;
+    height: 18px;
+}
+
+.sprite.Worst {
+    background-position: 0 -882px;
+}
+
+.sprite.playstore {
+    background-position: 0 -912px;
+    width: 60px;
+    height: 67px;
+    display: inline-block
+}
+
+.sprite.playstore_icon1 {
+    background-position: 0 -912px;
+    width: 60px;
+    height: 67px;
+    transform: scale(0.28) translate(-74px, -65px);
+    -webkit-transform: scale(0.28) translate(-74px, -65px);
+    -moz-transform: scale(0.28) translate(-74px, -65px);
+}
+
+.sprite.loading {
+    background-position: 0 -984px;
+    width: 512px;
+    height: 512px;
+}
+
+.sprite.error404 {
+    background-position: 0 -1501px;
+    width: 1366px;
+    height: 768px;
+}
+
+.sprite.go-home {
+    background-position: 0 -2274px;
+    width: 51px;
+    height: 51px;
+}
+
+.sprite.alert-icon {
+    background-position: 0 -2330px;
+    width: 24px;
+    height: 24px;
+}
+
+.sprite.exclamation {
+    background-position: 0 -2359px;
+    width: 6px;
+    height: 28px;
+}
+
+.sprite.info {
+    background-position: 0 -2392px;
+    width: 24px;
+    height: 24px;
+}
+
+.sprite.od {
+    background-position: 0 -2421px;
+    width: 64px;
+    height: 64px;
+}
+
+.sprite.tick-success {
+    background-position: 0 -2490px;
+    width: 24px;
+    height: 24px;
+}
+
+.sprite.playstore_icon {
+    background-position: 0 -2519px;
+    width: 16px;
+    height: 17px;
+}
+
+.sprite.tick-success {
+    background-position: 0 -2541px;
+    width: 43px;
+    height: 42px;
+}
+
+.sprite.no-fb {
+    background-position: 0 -2588px;
+    width: 373px;
+    height: 127px;
+    transform: scale(0.84);
+    -webkit-transform: scale(0.84);
+    -moz-transform: scale(0.84);
+    display: inline-block;
+}
+
+.sprite.no-twitter {
+    background-position: 0 -2720px;
+    width: 380px;
+    height: 122px;
+    transform: scale(0.84);
+    -webkit-transform: scale(0.84);
+    -moz-transform: scale(0.84);
+    display: inline-block;
+}
+
+.sprite.default-twitter-icon {
+    background-position: 0 -3088px;
+    width: 53px;
+    height: 53px;
+}
+
+.sprite.ajax-loader {
+    background-position: 0 -3146px;
+    width: 100px;
+    height: 100px;
+}
+
+.sprite.blue-bullet {
+    background-position: 0 -3251px;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin: 0px 15px 2px 19px;
+}
+
+.sprite.blue-dot {
+    background-position: 0 -3262px;
+    width: 3px;
+    height: 2px;
+}
+
+.sprite.bredcrumb-arrow {
+    background-position: 0 -3269px;
+    width: 6px;
+    height: 6px;
+}
+
+.sprite.channel-icon {
+    background-position: 0 -3280px;
+    width: 19px;
+    height: 19px;
+}
+
+.sprite.cross-square {
+    background-position: 0 -3304px;
+    width: 27px;
+}
+
+.sprite.csat-icon {
+    background-position: 0 -3334px;
+    width: 20px;
+    height: 20px;
+}
+
+.sprite.dashboard {
+    background-position: 0 -3359px;
+    width: 18px;
+    height: 16px;
+}
+
+.sprite.def-user {
+    background-position: 0 -3380px;
+    width: 300px;
+    height: 300px;
+}
+
+.sprite.default-profile-pic {
+    background-position: 0 -3685px;
+    width: 90px;
+    height: 90px;
+}
+
+.sprite.delete-icon {
+    background-position: 0 -3780px;
+    width: 12px;
+    height: 14px;
+}
+
+.sprite.dot {
+    background-position: 0 -3799px;
+    width: 8px;
+    height: 8px;
+}
+
+.sprite.edit-pencil {
+    background-position: 0 -3812px;
+    width: 16px;
+    height: 18px;
+}
+
+.sprite.email-icon {
+    background-position: 0 -3835px;
+    width: 86px;
+    height: 86px;
+    display: inline-block
+}
+
+.sprite.facebook {
+    background-position: 0 -3926px;
+    width: 12px;
+    height: 21px;
+}
+
+.sprite.fb-icon {
+    background-position: 0 -3952px;
+    width: 23px;
+    height: 43px;
+    display: inline-block
+}
+
+.sprite.grey-dot {
+    background-position: 0 -4000px;
+    width: 1px;
+    height: 1px;
+}
+
+.sprite.group-on {
+    background-position: 0 -4006px;
+    width: 82px;
+    height: 82px;
+}
+
+.sprite.insights {
+    background-position: 0 -4093px;
+    width: 17px;
+    height: 16px;
+}
+
+.sprite.od-logo {
+    background-position: 0 -4114px;
+    width: 34px;
+    height: 16px;
+}
+
+.sprite.onedirect-logo {
+    background-position: 0 -4135px;
+    width: 129px;
+    height: 16px;
+}
+
+.sprite.pdf-icon {
+    background-position: 0 -4156px;
+    width: 126px;
+    height: 32px;
+}
+
+.sprite.profile-icon {
+    background-position: 0 -4193px;
+    width: 18px;
+    height: 18px;
+}
+
+.sprite.profile-pic {
+    background-position: 0 -4216px;
+    width: 88px;
+    height: 88px;
+}
+
+.sprite.settings {
+    background-position: 0 -4309px;
+    width: 21px;
+    height: 22px;
+}
+
+.sprite.signout {
+    background-position: 0 -4336px;
+    width: 22px;
+    height: 24px;
+}
+
+.sprite.stats {
+    background-position: 0 -4365px;
+    width: 21px;
+    height: 17px;
+}
+
+.sprite.switch-cross {
+    background-position: 0 -4387px;
+    width: 9px;
+    height: 9px;
+}
+
+.sprite.switch-tick {
+    background-position: 0 -4401px;
+    width: 15px;
+    height: 10px;
+}
+
+.sprite.tag-close {
+    background-position: 0 -4416px;
+    width: 7px;
+    height: 7px;
+}
+
+.sprite.team-setup-icon {
+    background-position: 0 -4428px;
+    height: 19px;
+}
+
+.sprite.tick-square {
+    background-position: 0 -4452px;
+    width: 26px;
+}
+
+.sprite.ticket-setting-icon {
+    background-position: 0 -4482px;
+    width: 19px;
+    height: 19px;
+}
+
+.sprite.tickets {
+    background-position: 0 -4506px;
+    width: 21px;
+    height: 12px;
+}
+
+.sprite.twitter-bird {
+    background-position: 0 -4523px;
+    width: 51px;
+    height: 48px;
+    display: inline-block
+}
+
+.sprite.twitter {
+    background-position: 0 -4576px;
+    width: 18px;
+    height: 16px;
+}
+
+.sprite.work-setting {
+    background-position: 0 -4597px;
+    width: 19px;
+    height: 19px;
+}
+
+.sprite.brand_email {
+    background-position: 0 -4621px;
+}
+
+.sprite.user_email {
+    background-position: 0 -4678px;
+}
+
+.sprite.playstoreIcon {
+    background-position: 0 -4735px;
+    width: 76px;
+    height: 79px;
+    transform: scale(0.22) translate(134px, -131px);
+    -webkit-transform: scale(0.22) translate(134px, -131px);
+    -moz-transform: scale(0.22) translate(134px, -131px);
+}
+
+.sprite.playstore_list_icon {
+    background-position: 0 -4824px;
+    width: 16px;
+    height: 17px;
+}
+
+.sprite.white_fb_new {
+    background-position: 0 -4846px;
+    width: 26px;
+    height: 26px;
+}
+
+.sprite.white_linkedin_new {
+    background-position: 0 -4877px;
+    width: 26px;
+    height: 26px;
+}
+
+.sprite.white_twitter_new {
+    background-position: 0 -4908px;
+    width: 26px;
+    height: 26px;
+}
+
+.sprite.feed_new {
+    background-position: 0 -4939px;
+    width: 57px;
+    height: 57px;
+}
+
+.sprite.msg_new {
+    background-position: 0 -5001px;
+    width: 57px;
+    height: 57px;
+}
+
+.sprite.empty_notification_new {
+    background-position: 0 -5063px;
+    width: 147px;
+    height: 101px;
+}
+
+.sprite.nomessage_new {
+    background-position: 0 -5169px;
+    width: 196px;
+    height: 152px;
+}
+
+.sprite.twitter_new {
+    background-position: 0 -5326px;
+    height: 38px;
+    width: 38px;
+    transform: scale(0.5) translate(-14px, -14px);
+    -webkit-transform: scale(0.5) translate(-14px, -14px);
+    -moz-transform: scale(0.5) translate(-14px, -14px);
+}
+
+.sprite.fb_new {
+    background-position: 0 -5369px;
+    height: 38px;
+    width: 38px;
+    transform: scale(0.5) translate(-14px, -14px);
+    -webkit-transform: scale(0.5) translate(-14px, -14px);
+    -moz-transform: scale(0.5) translate(-14px, -14px);
+}
+
+.sprite.mail_new {
+    background-position: 0 -5412px;
+    height: 38px;
+    width: 38px;
+    transform: scale(0.5) translate(-14px, -14px);
+    -webkit-transform: scale(0.5) translate(-14px, -14px);
+    -moz-transform: scale(0.5) translate(-14px, -14px);
+}
+
+.sprite.others_new {
+    background-position: 0 -5455px;
+    height: 38px;
+    width: 38px;
+    transform: scale(0.5) translate(-14px, -14px);
+    -webkit-transform: scale(0.5) translate(-14px, -14px);
+    -moz-transform: scale(0.5) translate(-14px, -14px);
+}
+
+.sprite.playstore_new {
+    background-position: 0 -5498px;
+    height: 38px;
+    width: 38px;
+    transform: scale(0.5) translate(-14px, -14px);
+    -webkit-transform: scale(0.5) translate(-14px, -14px);
+    -moz-transform: scale(0.5) translate(-14px, -14px);
+}
+
+.sprite.feed_empty_new {
+    background-position: 0 -5541px;
+    width: 196px;
+    height: 154px;
+}
+
+.sprite.empty_notification_latest {
+    background-position: 0 -5700px;
+    width: 196px;
+    height: 137px;
+}
+
+.sprite.feed_empty_latest {
+    background-position: 0 -5842px;
+    width: 196px;
+    height: 154px;
+}
+
+.sprite.no_message_latest {
+    background-position: 0 -6001px;
+    width: 196px;
+    height: 152px;
+}
+
+.sprite.logout_new {
+    background-position: 0 -6158px;
+    width: 51px;
+    height: 54px;
+    transform: scale(0.28) translate(-25px, 0px);
+    -webkit-transform: scale(0.28) translate(-25px, 0px);
+    -moz-transform: scale(0.28) translate(-25px, 0px);
+}
+
+.sprite.logo_new {
+    background-position: 0 -6217px;
+    width: 330px;
+    height: 42px;
+    transform: scale(0.38) translate(-217px, 0px);
+    -webkit-transform: scale(0.38) translate(-217px, 0px);
+    -moz-transform: scale(0.38) translate(-217px, 0px);
+}
+
+.sprite.dashboard_new {
+    background-position: 0 -6264px;
+    height: 57px;
+    width: 51px;
+    transform: scale(0.28) translate(-25px, 0px);
+    -webkit-transform: scale(0.28) translate(-25px, 0px);
+    -moz-transform: scale(0.28) translate(-25px, 0px);
+}
+
+.sprite.facebook_sidebar_new {
+    background-position: 0 -6326px;
+    width: 39px;
+    height: 69px;
+    transform: scale(0.28) translate(-16px, 0px);
+    -webkit-transform: scale(0.28) translate(-16px, 0px);
+    -moz-transform: scale(0.28) translate(-16px, 0px);
+}
+
+.sprite.insight_new {
+    background-position: 0 -6400px;
+    width: 69px;
+    height: 33px;
+    transform: scale(0.28) translate(-56px, 0px);
+    -webkit-transform: scale(0.28) translate(-56px, 0px);
+    -moz-transform: scale(0.28) translate(-56px, 0px);
+}
+
+.sprite.playstore_sidebar_new {
+    background-position: 0 -6438px;
+    height: 57px;
+    width: 51px;
+    transform: scale(0.28) translate(-22px, 0px);
+    -webkit-transform: scale(0.28) translate(-22px, 0px);
+    -moz-transform: scale(0.28) translate(-22px, 0px);
+}
+
+.sprite.profile_new {
+    background-position: 0 -6500px;
+    width: 54px;
+    height: 57px;
+    transform: scale(0.28) translate(-33px, 0px);
+    -webkit-transform: scale(0.28) translate(-33px, 0px);
+    -moz-transform: scale(0.28) translate(-33px, 0px);
+}
+
+.sprite.settings_new {
+    background-position: 0 -6562px;
+    width: 54px;
+    height: 60px;
+    transform: scale(0.28) translate(-32px, 0px);
+    -webkit-transform: scale(0.28) translate(-32px, 0px);
+    -moz-transform: scale(0.28) translate(-32px, 0px);
+}
+
+.sprite.tickets_new {
+    background-position: 0 -6627px;
+    width: 54px;
+    height: 54px;
+    transform: scale(0.28) translate(-32px, 0px);
+    -webkit-transform: scale(0.28) translate(-45px, 0px);
+    -moz-transform: scale(0.28) translate(-45px, 0px);
+}
+
+.sprite.twitter_sidebar_new {
+    background-position: 0 -6686px;
+    width: 63px;
+    height: 53px;
+    transform: scale(0.28) translate(-42px, 0px);
+    -webkit-transform: scale(0.28) translate(-42px, 0px);
+    -moz-transform: scale(0.28) translate(-42px, 0px);
+}
+
+.sprite.csv {
+    background-position: -0px -6740px;
+    width: 57px;
+    height: 75px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.sprite.doc {
+    background-position: -57px -6740px;
+    width: 57px;
+    height: 75px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.sprite.jpg {
+    background-position: -114px -6740px;
+    width: 57px;
+    height: 75px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.sprite.pdf {
+    background-position: -171px -6740px;
+    width: 57px;
+    height: 75px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.sprite.png {
+    background-position: -228px -6740px;
+    width: 57px;
+    height: 75px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.sprite.ppt {
+    background-position: -285px -6740px;
+    width: 57px;
+    height: 75px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.sprite.xls {
+    background-position: -342px -6740px;
+    width: 57px;
+    height: 75px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.sprite.download {
+    background-position: -399px -6740px;
+    width: 36px;
+    height: 42px;
+    -webkit-transform: scale(0.45) translate(0, 10px);
+    transform: scale(0.45) translate(0, 10px);
+    -moz-transform: scale(0.45) translate(0, 10px);
+}
+
+.sprite.profile-placeholder {
+    background-position: -435px -6740px;
+    width: 34px;
+    height: 34px;
+    -webkit-transform: scale(0.45) translate(-27px, -23px);
+    transform: scale(0.45) translate(-27px, -23px);
+    -moz-transform: scale(0.45) translate(-27px, -23px);
+}
+
+.feed-empty-updated {
+    background-position: -0px -6815px;
+    width: 142px;
+    height: 114px;
+}
+
+.profile-placeholder-updated {
+    background-position: -141px -6814px;
+    width: 38px;
+    height: 36px;
+}

@@ -12,7 +12,8 @@ import { ReplaySubject, Subject, Subscription } from 'rxjs/Rx';
 import { fromJS, Map, List, Record } from 'immutable';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { CannedResponseComponent } from '../canned-response/canned-response.component';
-import { IFile } from '../../../shared/components/files-attachment-footer/files-attachment-footer.component';
+import { IFile } from '../files-attachment-footer/files-attachment-footer.component';
+
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
